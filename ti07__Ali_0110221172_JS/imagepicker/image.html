@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALI AKBAR</title>
+</head>
+<body>
+    <select name="" id="pilih" onchange="myFungtion()">
+        <option value="satu" id="gajah">gajah</option>
+        <option value="dua" id="kambing">kambing</option>
+        <option value="tiga" id="ayam">ayam</option>
+        <option value="empat" id="sapi">sapi</option>
+        <option value="lima" id="babi">babi</option>
+        <option value="enam" id="unta">unta</option>
+    </select>
+    photo: <span id="tempat"></span>
+  
+    <script>
+    function myFungtion(){
+        var pilih=document.getElementById("pilih").value;
+            if (pilih == "satu") {
+                var x=document.createElement("IMG");
+                x.setAttribute("src","gajah.jpg");
+                document.body.appendChild(x);  
+                x.setAttribute("width", "304");
+                x.setAttribute("height", "228");
+                alert("ini gambar gajah")
+            }
+            else if (pilih == "dua") {
+                var o=document.createElement("IMG");
+                o.setAttribute("src","kambing.jpg");
+                document.body.appendChild(o);
+                o.setAttribute("width", "304");
+                o.setAttribute("height", "228");  
+                alert("ini gambar kambing") 
+            }
+            else if (pilih == "tiga") {
+                var p=document.createElement("IMG");
+                p.setAttribute("src","ayam.jpg");
+                document.body.appendChild(p);
+                p.setAttribute("width", "304");
+                p.setAttribute("height", "228");   
+                alert("ini gambar ayam")
+            }
+            else if (pilih == "empat") {
+                var q=document.createElement("IMG");
+                q.setAttribute("src","sapi.jpg");
+                document.body.appendChild(q);
+                q.setAttribute("width", "304");
+                q.setAttribute("height", "228");   
+                alert("ini gambar sapi")
+            }else if(pilih=="lima"){
+                var r=document.createElement("IMG");
+                r.setAttribute("src","babi.jpg");
+                document.body.appendChild(r);
+                r.setAttribute("width", "304");
+                r.setAttribute("height", "228");   
+                alert("ini gambar babi ")
+            }else{
+                var z=document.createElement("IMG");
+                z.setAttribute("src","unta.jpg");
+                document.body.appendChild(z);
+                z.setAttribute("width", "304");
+                z.setAttribute("height", "228");   
+                alert("ini gambar unta")
+
+            }
+
+        
+    }
+    </script>
+
+
+
+</body>
+</html>

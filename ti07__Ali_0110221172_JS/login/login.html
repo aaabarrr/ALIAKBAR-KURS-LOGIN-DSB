@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <h1>ISI USERNAME DAN PASSWORD</h1>
+    <form onsubmit="kirim()" id="form">
+        Username :<input type="text" name="" id="username"> <br>
+        Password :<input type="text" name="" id="password"> <br>
+        <button type="submit">Login</button>
+    </form> <br>
+     
+     <script>
+         function kirim(){
+            let userrname=document.getElementById("username").value;
+            let password=document.getElementById("password").value;
+            let form=document.getElementById("form")
+            if (userrname=="ali"&& password=="ali"){
+                form.setAttribute('action','dasboard.html')
+                window.alert("login berhasil")
+               
+                
+            }else{
+                window.alert("Silahkan ulangin lagi")
+            }
+
+         }
+         
+     </script>
+</body>
+</html>

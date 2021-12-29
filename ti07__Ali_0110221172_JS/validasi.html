@@ -1,0 +1,69 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<div id="login">
+		<form action="#" id="validasi" method="POST" onSubmit="validasi()">
+			<div>
+				<label>Nama Lengkap:</label>
+				<input type="text" name="nama" id="nama" />
+			</div>
+			<div>
+				<label>Email:</label>
+				<input type="email" name="email" id="email" />
+			</div>
+			<div>
+				<label>jam Keberangkatan:</label>
+				<input type="time"name="jam" id="jam">
+			</div>
+            <div>
+				<label>Tujuan Keberangkatan:</label>
+				<input type="text"name="tujuan" id="tujuan">
+			</div>
+            <div>
+				<label>Jumlah tiket:</label>
+				<select name="jumlah" id="jumlah" onselect="validasi()">
+                    <option value=""></option>
+                    <option value="satu">1</option>
+                    <option value="dua">2</option>
+                    <option value="tiga">3</option>
+                    <option value="empat">4</option>
+                    <option value="lima">5</option>
+                    <option value="enam">6</option>
+                    <option value="tujuh">7</option>
+                    <option value="delapan">8</option>
+                    <option value="sembilan">9</option>
+                    <option value="sepuluh">10</option>
+                   
+                </select>
+			</div>
+
+			<div>
+				<button type="submit" onsubmit="validasi()">Submit</button>
+			</div>		
+		</form>
+		<p id="tampilan"></p>
+	</div>
+</body>
+<script type="text/javascript">
+	function validasi() {
+		var nama = document.getElementById("nama").value;
+		var email = document.getElementById("email").value;
+		var jam = document.getElementById("jam").value;
+        var Tujuan=document.getElementById("tujuan").value;
+        var jumlah=document.getElementById("jumlah").value;
+		var login =document.getElementById("validasi").value;
+		var tampilan=document.getElementById("tampilan")
+		if (nama != "" && email!="" && jam !="" && Tujuan!=""&& jumlah!="" ) {
+			alert('login berhasil')
+			
+				
+		}else{
+			let y =document.getElementById("tampilan");
+			y.innerHTML="GAGAL";
+		}
+	}
+</script>
+</html>
